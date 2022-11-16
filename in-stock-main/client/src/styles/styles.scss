@@ -1,0 +1,101 @@
+@use "./partials/typography" as *;
+@use "./partials/mixins" as*;
+
+// Colours
+
+//Primary Colours:
+$Instock-Black: #13182c;
+$Instock-Indigo: #2e66e5;
+$White: #ffffff;
+
+//Secondary Colours:
+
+$Slate: #5c667e;
+$Cloud: #bdc5d5;
+
+//Background Colours:
+
+$Graphite: #232940;
+$Light-Grey: #f7f8f9;
+
+//Supporting Colours:
+
+$Green: #158463;
+$Red: #c94515;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  box-shadow: 0 2px 5px rgba(19, 24, 44, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: $White;
+  margin: -70px 16px 5px 16px;
+
+  @include tablet {
+    margin: -100px 32px 5px 32px;
+  }
+  
+  @include desktop {
+    width: 1020px;
+    margin: -100px auto 5px;
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+input[type=text], [type=email], [type=tel] {
+  height: 2.25rem;
+  padding: 0 1rem;
+  width: 100%;
+  border: 1px solid #bdc5d5;
+  border-radius: 20px;
+  margin: 0;
+  font-family: "Titillium Web", sans-serif;
+  color: $Instock-Black;
+  font-size: 0.8125rem;
+  @include tablet {
+    font-size: 0.875rem;
+  }
+}
+
+textarea {
+  padding: rem(8px) rem(16px);
+  width: 100%;
+  border: 1px solid #bdc5d5;
+  border-radius: 20px;
+  margin: 0;
+  font-family: "Titillium Web", sans-serif;
+  color: $Instock-Black;
+  font-size: 0.8125rem;
+  resize: none;
+  height: rem(120px);
+
+  @include tablet {
+    font-size: 0.875rem;
+  }
+}
+
+select {
+  width: 100%;
+  height: 2.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid $Cloud;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%235C667E' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 5px;
+}

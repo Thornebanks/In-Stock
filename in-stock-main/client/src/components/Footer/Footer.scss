@@ -1,0 +1,19 @@
+@import '../../styles/styles.scss';
+@import '../../styles/partials/mixins';
+
+.footer {
+    background-color: $White;
+    text-align: center;
+    width: 100%;
+    padding: 40px 0;
+    margin-top: auto;
+
+    &__text {
+    color: $Slate;
+    font-size: .65rem;
+    
+    @include tablet {
+        font-size: .75rem;
+    }
+    }
+}

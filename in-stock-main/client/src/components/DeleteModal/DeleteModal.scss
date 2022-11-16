@@ -1,0 +1,66 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/styles" as *;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($Instock-Black, 0.7);
+  z-index: 10;
+}
+
+.modal {
+  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: rem(60px) rem(16px) rem(24px);
+  display: flex;
+  flex-direction: column;
+  gap: rem(16px);
+  color: $Instock-Black;
+
+  @include tablet {
+    width: rem(672px);
+    height: rem(262px);
+    margin: rem(185px) auto 0;
+    padding: rem(40px) rem(64px);
+  }
+
+  &__close {
+    position: absolute;
+    font-size: rem(24px);
+    top: rem(16px);
+    right: rem(16px);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    line-height: rem(36px);
+  }
+
+  &__body {
+    @extend .body-large;
+    margin: 0;
+    line-height: rem(26px);
+
+    @include tablet {
+      line-height: rem(28px);
+    }
+  }
+
+  &__btns {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    gap: rem(16px);
+    justify-content: flex-end;
+  }
+}

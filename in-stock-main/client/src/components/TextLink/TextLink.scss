@@ -1,0 +1,21 @@
+@use "../../styles/styles" as *;
+
+.text-link {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  text-decoration: none;
+  color: $Instock-Indigo;
+  font-weight: bold;
+
+  &__icon {
+    position: relative;
+    width: 18px;
+    top: 1px;
+    margin-left: 3px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

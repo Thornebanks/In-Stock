@@ -1,0 +1,81 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/styles" as *;
+
+.btn {
+  height: rem(36px);
+  padding: rem(8px) rem(16px);
+  border-radius: rem(20px);
+  width: 100%;
+  font-size: rem(13px);
+  line-height: rem(20px);
+  font-weight: 600;
+  font-family: "Titillium Web", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: rem(4px);
+  border: 0;
+  outline: none;
+
+  @include tablet {
+    height: rem(38px);
+    width: auto;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__icon {
+    font-size: rem(15px);
+  }
+
+  &__text--icon-only {
+    display: none;
+
+    @include tablet {
+      display: inline;
+    }
+  }
+
+  &--edit {
+    width: auto;
+    padding: rem(10.5px);
+
+    @include tablet {
+      padding: rem(8px) rem(16px);
+    }
+  }
+
+  &--primary, &--edit {
+    color: white;
+    background-color: $Instock-Indigo;
+
+    &:hover {
+      background-color: $Graphite;
+    }
+  }
+
+  &--secondary {
+    color: $Slate;
+    background-color: white;
+    border: 1px solid $Cloud;
+
+
+    &:hover {
+      color: $Instock-Indigo;
+      border-color: $Instock-Indigo;
+    }
+  }
+
+  &--delete {
+    color: white;
+    background-color: $Red;
+
+    &:hover {
+      background-color: $Graphite;
+    }
+  }
+}

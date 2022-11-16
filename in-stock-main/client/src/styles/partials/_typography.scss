@@ -1,0 +1,53 @@
+@use "mixins" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap");
+
+h1 {
+  font-size: 1.75rem;
+  @include tablet {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 1.25rem;
+  @include tablet {
+    font-size: 1.5rem;
+  }
+}
+
+h3 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  @include tablet {
+    font-size: 0.875rem;
+  }
+}
+
+h4 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.6875rem;
+  @include tablet {
+    font-size: 0.75rem;
+  }
+}
+
+.body-large {
+  font-size: 0.9375rem;
+  @include tablet {
+    font-size: 1rem;
+  }
+}
+.body-medium {
+  font-size: 0.8125rem;
+  @include tablet {
+    font-size: 0.875rem;
+  }
+}
+.body-small {
+  font-size: 0.6875rem;
+  @include tablet {
+    font-size: 0.75rem;
+  }
+}

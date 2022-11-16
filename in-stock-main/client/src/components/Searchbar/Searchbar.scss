@@ -1,0 +1,36 @@
+@use '../../styles/styles.scss' as *;
+@use '../../styles/partials/mixins' as *;
+
+.searchbar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+        width: 250px;
+        align-items: center;
+        margin: 0;
+    }
+    
+    &__input{
+        height: 2.25rem;
+        padding: 0 1rem;
+        width: 100%;
+        border: 1px solid $Cloud;
+        border-radius: 20px;
+        margin: 0;
+
+        &:focus {
+            outline: none;
+            border: 1px solid $Instock-Indigo;
+        }
+    }
+    &__img {
+        position: absolute;
+        top: 6px;
+        right: 15px;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}

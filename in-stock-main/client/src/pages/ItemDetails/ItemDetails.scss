@@ -1,0 +1,71 @@
+@import '../../styles/styles.scss';
+@import '../../styles/partials/mixins';
+
+.item-data {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include tablet {
+        flex-direction: row;
+        padding: 32px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+
+        @include tablet {
+            padding-right: 32px;
+            border-right: 1px solid $Cloud;
+        }
+
+        &--wrap {
+            flex-wrap: wrap;
+            flex-direction: row;
+            border-right: none;
+
+            @include tablet {
+                padding-left: 32px;
+            }
+        }
+    }
+
+    &__group {
+        width: 100%;
+
+        &--wrap {
+            width: 45%;
+        }
+    }
+
+    &__title {
+        color: #5c667e;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    &__value {
+        line-height: 20px;
+    }
+}
+
+.item-details .page-header {
+    display: flex;
+    flex-direction: row;
+    gap: rem(8px);
+
+    &__back:hover {
+      cursor: pointer;
+    }
+
+    &__title {
+      margin-right: auto;
+      font-weight: bold;
+    }
+}

@@ -1,0 +1,111 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/styles" as *;
+
+.edit-inventory {
+  &__form {
+    &-inputfields {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      @include tablet {
+        gap: 0px;
+        flex-direction: row;
+      }
+    }
+
+    &-section {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 0 16px;
+
+      @include tablet {
+        gap: 32px;
+        padding: 0px 40px;
+        margin: 32px 0;
+      }
+
+      &--left {
+        padding: 20px 16px;
+        border-bottom: 1px solid $Cloud;
+
+        @include tablet {
+          width: 50%;
+          padding: 0px 40px;
+          margin: 32px 0;
+          border-bottom: none;
+          border-right: 1px solid $Cloud;
+        }
+      }
+
+      &--right {
+        @include tablet {
+          width: 50%;
+        }
+      }
+    }
+
+    &-title {
+      padding-bottom: 8px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    &-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      &--hidden {
+        display: none;
+      }
+
+      &--qty {
+        @include tablet {
+          width: rem(122px);
+        }
+      }
+    }
+
+    &-label {
+      font-weight: 600;
+      font-size: rem(13px);
+      line-height: 20px;
+    }
+
+    &-radioContainer{
+      display: flex;
+      justify-content: space-between;
+      padding-right: 10%;
+      @include desktop {
+        padding-right: 40%;
+      }
+    }
+    &-inStock,
+    &-outStock{
+      color: $Cloud;
+    }
+    &-radioLabel{
+      padding-left: 8px;
+    }
+
+    &-footer {
+      margin-top: 16px;
+      width: 100%;
+      padding: 10px 0;
+      background-color: $Light-Grey;
+      display: flex;
+      gap: 16px;
+      padding: 16px;
+
+      @include tablet {
+        padding: 16px 40px;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+:checked + label {
+  color: $Instock-Black;
+}

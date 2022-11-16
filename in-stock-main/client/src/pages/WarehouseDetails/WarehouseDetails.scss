@@ -1,0 +1,67 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/styles" as *;
+
+.warehouse-details {
+  .page-header {
+    display: flex;
+    flex-direction: row;
+    gap: rem(8px);
+
+    &__back:hover {
+      cursor: pointer;
+    }
+
+    &__title {
+      margin-right: auto;
+      font-weight: bold;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: rem(16px);
+    gap: rem(16px);
+
+    @include tablet {
+      flex-direction: row;
+      margin: rem(24px) rem(32px);
+      gap: 40px;
+    }
+    @include desktop {
+      margin: rem(24px) rem(40px);
+    }
+  }
+
+  &__top {
+    @include tablet {
+      flex-grow: 3;
+      border-right: solid 1px $Cloud;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+
+    @include tablet {
+      flex-grow: 2;
+      gap: rem(24px);
+      flex-direction: row;
+    }
+  }
+
+  &__group {
+    width: 50%;
+    @include tablet {
+    }
+  }
+
+  &__label {
+    color: $Slate;
+    margin-bottom: rem(4px);
+  }
+
+  .body-medium {
+    line-height: rem(20px);
+  }
+}

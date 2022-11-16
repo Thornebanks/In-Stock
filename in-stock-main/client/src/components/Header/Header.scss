@@ -1,0 +1,73 @@
+@use "../../styles/styles.scss" as *;
+@use "../../styles/partials/mixins" as *;
+
+.active {
+  background-color: $Instock-Black;
+  text-decoration: none;
+}
+
+.header {
+  background-color: $Graphite;
+  &__logo {
+    display: flex;
+    margin: 0 auto;
+  }
+  &__links {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+
+    @include tablet {
+      width: auto;
+    }
+
+    &-anchor {
+      color: $White;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 15px 40px;
+      border-radius: 25px;
+      width: 50%;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      @include tablet {
+        font-size: 14px;
+        padding: 15px 20px;
+        width: auto;
+      }
+    }
+  }
+  &__wrapper {
+    width: 100%;
+    padding: 16px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+      padding: 32px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include desktop {
+      padding: 32px 0;
+      width: 1000px;
+      margin: 0 auto;
+    }
+  }
+  &__margin {
+    width: 100%;
+    background-color: $Graphite;
+    height: 80px;
+
+    @include tablet {
+      height: 100px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/styles" as *;
+
+.tag {
+  display: inline-block;
+  padding: rem(4px) rem(8px);
+  border-radius: rem(20px);
+  margin: 0;
+  line-height: rem(16px);
+
+  @include tablet {
+    line-height: rem(18px);
+  }
+
+  &--red {
+    color: $Red;
+    background-color: rgba($Red, 0.07);
+  }
+
+  &--green {
+    color: $Green;
+    background-color: rgba($Green, 0.07);
+  }
+}

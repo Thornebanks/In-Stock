@@ -1,0 +1,19 @@
+.custom-form {
+    &__error {
+        display: none;
+    }
+}
+
+.error-el {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: red;
+
+    &__img {
+        position: relative;
+        top: 3px;
+        left: -1px;
+        width: 15px;
+    }
+}

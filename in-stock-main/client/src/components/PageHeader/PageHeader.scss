@@ -1,0 +1,68 @@
+@use '../../styles/styles.scss' as *;
+@use '../../styles/partials/mixins' as *;
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-bottom: 1px solid $Cloud;
+    background-color: $White;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 16px;
+
+    @include tablet {
+        height: 100px;
+        flex-direction: row;
+        padding: 0 32px;
+    }
+
+    @include desktop {
+        padding: 0 40px;
+        max-width: 1020px;
+    }
+
+    &--no-border {
+        border-bottom: none;
+    }
+
+    &-group {
+        align-self: flex-start;
+        display: flex;
+        gap: 8px;
+        width: 100%;
+
+        @include tablet {
+            align-self: center;
+            width: auto;
+        }
+
+        &__title {
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin: 0;
+
+            @include tablet {
+                font-size: 2rem;
+            }
+        }
+
+        &__back {
+            cursor: pointer;
+        }
+    }
+
+    &__children {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 16px;
+
+        @include tablet {
+            width: auto;
+            flex-direction: row;
+        }
+    }
+}
